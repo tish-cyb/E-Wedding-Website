@@ -1,7 +1,8 @@
 {
   "name": "jaehub-einvite",
+  "version": "1.0.0",
+  "description": "A beautiful, mobile-responsive interactive wedding e-invite built with React, Vite, Bootstrap, and JavaScript.",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,9 +10,25 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "keywords": [
+    "wedding",
+    "e-invite",
+    "react",
+    "vite",
+    "bootstrap",
+    "responsive-design",
+    "event-website"
+  ],
+  "author": "Tiffany Bava",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tish-cyb/Jae-Hub-Website.git"
+  },
   "dependencies": {
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "bootstrap": "^5.3.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
