@@ -1,10 +1,13 @@
 import './App.css';
+import Navbar from './components/Navbar.jsx';
+import Home from './pages/Home.jsx';
+
 
 function App() {
   return (
     <>
-      <h1>Wedding E-Invite</h1>
-      <p>Welcome to our wedding invitation site!</p>
+      <Navbar />
+      <Home />
     </>
   );
 }

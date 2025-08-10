@@ -4,26 +4,6 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden; /* Prevent horizontal overflow */
-
-  /* Full-page background image */
-  background-image: url('/images/2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Optional: Site-wide dark overlay for readability */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
 }
 
 /* Navbar container */
@@ -36,12 +16,26 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.5rem;
+  padding: 0 2.5rem; /* Added more space on left & right */
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 70px;
+  height: 70px; /* Increased height so links aren’t cut */
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hidden state for scroll effect */
+.nav.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Visible state for scroll effect */
+.nav.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* Logo section */
@@ -49,10 +43,11 @@ body::before {
   display: flex;
   align-items: center;
   height: 100%;
+  padding-left: 20px; /* Push logo slightly to the right */
 }
 
 .logo-img {
-  height: 45px;
+  height: 45px; /* Slightly bigger logo */
   width: auto;
   margin-right: 10px;
 }
@@ -66,6 +61,7 @@ body::before {
   height: 100%;
 }
 
+/* Link styling */
 .nav-links a {
   text-decoration: none;
   color: #333;
@@ -75,7 +71,7 @@ body::before {
   display: flex;
   align-items: center;
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1; /* Keeps links vertically centered */
   padding: 0.5rem 0.75rem;
 }
 
@@ -113,31 +109,17 @@ body::before {
   top: 0;
 }
 
-/* Hero Section */
-.home-hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-
-  padding: 0 1rem;
-  box-sizing: border-box;
-  overflow: hidden;
-  z-index: 1;
-}
-
-/* Responsive Adjustments */
+/* Responsive styles */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
     align-items: center;
     height: auto;
     padding: 1rem;
+  }
+
+  .nav-logo {
+    padding-left: 0; /* Remove extra padding on mobile */
   }
 
   .nav-links {
@@ -152,9 +134,5 @@ body::before {
     width: 100%;
     text-align: center;
     padding: 0.5rem 0;
-  }
-
-  .home-hero {
-    padding: 2rem 1rem;
   }
 }
