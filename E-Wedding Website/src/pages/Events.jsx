@@ -24,7 +24,7 @@ function Events() {
       <div className="map-container">
         <iframe
           title="Wedding Venue Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.92461817121!2d-73.98513088459215!3d40.7588967793266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQ1JzMyLjAiTiA3M8KwNTknMDMuOSJX!5e0!3m2!1sen!2sus!4v1635457381117!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.620690419166!2d-73.98966880453197!3d40.758611699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fc102f6e51%3A0x88603435e036aa5b!2sSt.%20Patrick&#39;s%20Cathedral!5e0!3m2!1sen!2sph!4v1754903005367!5m2!1sen!2sph"
           allowFullScreen=""
           loading="lazy"
         ></iframe>
