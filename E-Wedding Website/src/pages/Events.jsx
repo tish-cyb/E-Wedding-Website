@@ -8,14 +8,14 @@ function Events() {
       <div className="event-details">
         <div className="event-item">
           <h3>Ceremony</h3>
-          <p>📅 Date: June 25, 2025</p>
+          <p>📅 Date: February 14, 2026</p>
           <p>🕒 Time: 3:00 PM</p>
           <p>📍 Venue: St. Mary’s Church, New York</p>
         </div>
 
         <div className="event-item">
           <h3>Reception</h3>
-          <p>📅 Date: June 25, 2025</p>
+          <p>📅 Date: February 14, 2026</p>
           <p>🕒 Time: 6:00 PM</p>
           <p>📍 Venue: The Grand Ballroom, NYC Hotel</p>
         </div>
