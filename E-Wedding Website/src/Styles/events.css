@@ -103,3 +103,41 @@
   display: block;
   margin: 0;
 }
+
+@media (max-width: 1024px) {
+  .wedding-events .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .schedule, .invitation {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .wedding-events {
+    padding: 20px 5%;
+  }
+
+  .event-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .event-card p {
+    font-size: 0.85rem;
+  }
+
+  .invitation h2 {
+    font-size: 1.4rem;
+  }
+
+  .invitation p {
+    font-size: 0.9rem;
+    margin: 10px 0 20px;
+  }
+
+  .map {
+    margin: 10px 0;
+  }
+}
