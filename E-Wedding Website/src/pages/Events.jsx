@@ -7,7 +7,6 @@ function Events() {
   <div class="overlay"></div>
 
   <div class="content">
-    <!-- Left side: Schedule -->
     <div class="schedule">
       <div class="event-card">
         <h3>Event:</h3>
@@ -46,7 +45,6 @@ function Events() {
       </div>
     </div>
 
-    <!-- Right side: Invitation + Map -->
     <div class="invitation">
       <h2>You're Invited!</h2>
       <p>
