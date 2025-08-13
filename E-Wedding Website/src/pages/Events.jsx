@@ -3,41 +3,71 @@ import '../styles/events.css';
 
 function Events() {
   return (
-    <section className="events-section">
-      <h2>Wedding Events</h2>
-      <div className="event-details">
-        <div className="event-item">
-          <h3>Ceremony</h3>
-          <p>📅 Date: February 14, 2026</p>
-          <p>🕒 Time: 3:00 PM</p>
-          <p>📍 Venue: St. Patrick’s Cathedral, New York</p>
-        </div>
+    <section class="wedding-events">
+  <div class="overlay"></div>
 
-        <div className="event-item">
-          <h3>Reception</h3>
-          <p>📅 Date: February 14, 2026</p>
-          <p>🕒 Time: 6:00 PM</p>
-          <p>📍 Venue: Hyatt Grand Central, New York</p>
-        </div>
+  <div class="content">
+    <!-- Left side: Schedule -->
+    <div class="schedule">
+      <div class="event-card">
+        <h3>Event:</h3>
+        <p>Attend the Pre-Wedding Ceremony</p>
+        <h3>Time:</h3>
+        <p>4 PM</p>
+        <h3>Location:</h3>
+        <p>Okada Manila</p>
       </div>
 
-      <div className="map-container">
-        <iframe
-          title="Wedding Venue Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.620690419166!2d-73.98966880453197!3d40.758611699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fc102f6e51%3A0x88603435e036aa5b!2sSt.%20Patrick&#39;s%20Cathedral!5e0!3m2!1sen!2sph!4v1754903005367!5m2!1sen!2sph"
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+      <div class="event-card">
+        <h3>Event:</h3>
+        <p>Main Wedding Ceremony</p>
+        <h3>Time:</h3>
+        <p>6 PM</p>
+        <h3>Location:</h3>
+        <p>Crystal Pavilion, Okada Manila</p>
       </div>
-      <div className="map-container">
-        <iframe
-          title="Wedding Reception Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12088.469861417292!2d-73.99269316173695!3d40.75944109539077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259022d712db1%3A0x500317cc3cc9f519!2sHyatt%20Grand%20Central%20New%20York!5e0!3m2!1sen!2sph!4v1754903706444!5m2!1sen!2sph"
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
+
+      <div class="event-card">
+        <h3>Event:</h3>
+        <p>Wedding Reception</p>
+        <h3>Time:</h3>
+        <p>7 PM</p>
+        <h3>Location:</h3>
+        <p>Grand Ballroom, Okada Manila</p>
       </div>
-    </section>
+
+      <div class="event-card">
+        <h3>Event:</h3>
+        <p>After-Party</p>
+        <h3>Time:</h3>
+        <p>10 PM</p>
+        <h3>Location:</h3>
+        <p>Okada Manila Sky Bar</p>
+      </div>
+    </div>
+
+    <!-- Right side: Invitation + Map -->
+    <div class="invitation">
+      <h2>You're Invited!</h2>
+      <p>
+        We are delighted to invite you to celebrate our wedding in the heart of elegance — the <strong>Crystal Pavilion at Okada Manila</strong>. Our theme for the evening is <strong>Regency</strong>, where timeless grace meets modern charm. 
+      </p>
+      <p>
+        Please join us in semi-formal attire as we exchange our vows and share this joyous moment with you. We can’t wait to welcome you to our special day filled with love, laughter, and unforgettable memories. 
+      </p>
+      <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.2311608264456!2d120.97996215552124!3d14.515527604259752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cdb9f25aa7b9%3A0x5a5d4fd070c78502!2sCrystal%20Pavilion%2C%20Okada%20Manila!5e0!3m2!1sen!2sph!4v1754991333390!5m2!1sen!2sph"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+      </div>
+    </div>
+  </div>
+</section>
   );
 }
 

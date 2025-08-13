@@ -1,44 +1,87 @@
-.events-section {
-  padding: 2rem;
-  background-color: #fff8f0;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.events-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #c94f4f;
-}
-
-.event-details {
+.wedding-events {
+  position: relative;
+  height: 100vh;
+  background: url('https://www.thespruce.com/thmb/3Wp6ttDNgcSzHQCm7mlRE2qf5xQ=/2172x1448/filters:fill(auto,1)/GettyImages-683866307-5c0a18a6c9e77c00016de2c5.jpg') center/cover no-repeat;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
 }
 
-.event-item {
-  background: #ffe8e8;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 250px;
-}
-
-.event-item h3 {
-  margin-bottom: 0.5rem;
-  color: #a63d3d;
-}
-
-.map-container {
-  margin-top: 2rem;
-}
-
-.map-container iframe {
+.wedding-events .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
-  height: 300px;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+.wedding-events .content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 50px;
+  width: 80%;
+  max-width: 1200px;
+  color: white;
+}
+
+.schedule {
+  flex: 1;
+  display: grid;
+  gap: 20px;
+}
+
+.event-card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.event-card h3 {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.event-card p {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.invitation {
+  flex: 1.5;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.invitation h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.invitation p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.map {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map iframe {
+  border-radius: 8px;
   border: none;
-  border-radius: 10px;
 }
