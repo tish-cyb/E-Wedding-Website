@@ -1,7 +1,6 @@
 .wedding-events {
   position: relative;
   height: 100vh;
-  background: url('https://www.thespruce.com/thmb/3Wp6ttDNgcSzHQCm7mlRE2qf5xQ=/2172x1448/filters:fill(auto,1)/GettyImages-683866307-5c0a18a6c9e77c00016de2c5.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
