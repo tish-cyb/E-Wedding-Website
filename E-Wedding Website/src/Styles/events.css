@@ -103,40 +103,23 @@
   margin: 0;
 }
 
-@media (max-width: 1024px) {
-  .wedding-events .content {
-    flex-direction: column;
-    gap: 20px;
-  }
+.wedding-events .content {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .schedule, .invitation {
-    width: 100%;
+@media (max-width: 992px) {
+  .schedule, 
+  .invitation {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 600px) {
-  .wedding-events {
-    padding: 20px 5%;
-  }
-
-  .event-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .event-card p {
-    font-size: 0.85rem;
-  }
-
-  .invitation h2 {
-    font-size: 1.4rem;
-  }
-
-  .invitation p {
-    font-size: 0.9rem;
-    margin: 10px 0 20px;
-  }
-
-  .map {
-    margin: 10px 0;
+  .schedule, 
+  .invitation {
+    flex: 1 1 100%; 
+    max-width: 100%;
   }
 }
