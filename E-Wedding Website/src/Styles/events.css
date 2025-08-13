@@ -1,0 +1,125 @@
+.wedding-events {
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 3%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wedding-events .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #EEE8E3;
+  z-index: 1;
+}
+
+.wedding-events .content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  color: white;
+}
+
+.schedule {
+  flex: 1;
+  display: grid;
+  gap: 20px;
+}
+
+.event-card {
+  background: #d2c0b3d7;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #c4b1a3d7;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px #a07d6b33; 
+  width: 100%;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  background: #c4b1a3d7;
+  box-shadow: 0 8px 20px rgba(79, 63, 53, 0.2);
+}
+
+.event-card h3 {
+  margin: 2px 0 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  color: #201a15d7;
+}
+
+.event-card p {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color: #201a15d7;
+}
+
+.invitation {
+  flex: 1.5;
+  background: #d2c0b3d7;
+  padding: 20px;
+  border-radius: 8px; 
+  border: 1px solid #c4b1a3d7;
+}
+
+.invitation h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #201a15d7;
+}
+
+.invitation p {
+  margin: 15px 5px 30px 15px;
+  line-height: 1.5;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color: #201a15d7;
+}
+
+.map {
+    margin: 15px;
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map iframe {
+  border-radius: 8px;
+  border: none;
+  display: block;
+  margin: 0;
+}
+
+.wedding-events .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  .schedule, 
+  .invitation {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .schedule, 
+  .invitation {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+}
