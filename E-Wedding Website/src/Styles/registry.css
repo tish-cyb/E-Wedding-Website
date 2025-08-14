@@ -1,4 +1,3 @@
-/* Registry Section */
 .registry-section {
   position: relative;
   width: 100vw;
@@ -10,15 +9,13 @@
   font-family: 'Playfair Display', serif;
 }
 
-/* Titles & Description */
 .registry-section h2 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1.5rem;
   font-weight: 400;
-  color: #201a15;
+  color: #262626;
 }
 
-/* Title Divider */
 .registry-section .title-divider {
   width: 80px;
   height: 2px;
@@ -26,16 +23,29 @@
   margin: 1rem auto 2rem; 
 }
 
-/* Subheading */
 .registry-section p {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
-  color: #201a15d7;
+  color: #666;
   text-align: center;
   margin-bottom: 2rem; 
 }
 
-/* Registry Cards Container */
+.registry-section > h2,
+.registry-section > p,
+.flip-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.registry-section > h2.show,
+.registry-section > p.show,
+.flip-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .registry-cards {
   display: flex;
   justify-content: center;
@@ -43,14 +53,13 @@
   flex-wrap: wrap;
 }
 
-/* Flip Card Styles */
 .flip-card {
   background-color: transparent;
-  width: 100%;           /* full width of flex item */
-  max-width: 300px;      /* maximum width */
-  height: 220px;         /* fixed height */
+  width: 100%;           
+  max-width: 300px;      
+  height: 220px;         
   perspective: 1000px;
-  flex: 1 1 250px;       /* flexible width with min 250px */
+  flex: 1 1 250px;      
 }
 
 .flip-card-inner {
@@ -65,7 +74,6 @@
   transform: rotateY(180deg);
 }
 
-/* Front and Back */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
@@ -114,7 +122,6 @@
   transform: scale(1.05);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .registry-cards {
     flex-direction: column;
@@ -125,7 +132,7 @@
   .flip-card {
     width: 90%;
     height: 200px;
-    flex: unset;  /* remove flex restrictions for small screens */
+    flex: unset;  
   }
 }
 

@@ -1,4 +1,5 @@
 // React Swiper
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Swiper core styles
@@ -14,15 +15,40 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import "../Styles/gallery.css";
 
 function Gallery() {
+  useEffect(() => {
+    const galleryText = document.querySelector(".gallery-text");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show"); // add show class when in view
+          }
+        });
+      },
+      { threshold: 0.3 } // triggers when 20% visible
+    );
+
+    if (galleryText) observer.observe(galleryText);
+
+    return () => {
+      if (galleryText) observer.unobserve(galleryText);
+    };
+  }, []);
+
   return (
     <section className="swiper-section" id="gallery">
       <div className="container">
-        <h1 className="heading">My Gallery</h1>
-        <div className="title-divider"></div>
-        <p className="subheading">
-          Capturing our beautiful moments together.
-        </p>
+        {/* Animated Text */}
+        <div className="gallery-text">
+          <h1 className="heading">My Gallery</h1>
+          <div className="title-divider"></div>
+          <p className="subheading">
+            Capturing our beautiful moments together.
+          </p>
+        </div>
 
+        {/* Swiper */}
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -44,7 +70,6 @@ function Gallery() {
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="swiper_container"
         >
-          {/* Update image paths once you add them in /public/images or /src/Styles/images */}
           <SwiperSlide><img src="/images/2.jpg" alt="slide 1" /></SwiperSlide>
           <SwiperSlide><img src="/images/3.jpg" alt="slide 2" /></SwiperSlide>
           <SwiperSlide><img src="/images/4.jpg" alt="slide 3" /></SwiperSlide>

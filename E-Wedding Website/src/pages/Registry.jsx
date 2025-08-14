@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/registry.css";
 
 function RegistrySection() {
+  useEffect(() => {
+    // Select the heading, paragraph, and all flip-cards
+    const elements = document.querySelectorAll(".registry-section > h2, .registry-section > p, .flip-card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <section className="registry-section" id="registry">
       <h2>Gift Registry</h2>
