@@ -1,0 +1,116 @@
+.rsvp-section {
+  padding: 140px 40px 40px 40px;
+  background: #f8f8f8;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 40px auto;
+  border: 2px solid pink;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.rsvp-header {
+  background-color: pink;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+}
+
+.rsvp-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.rsvp-section p {
+  font-family: 'Allura', cursive;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rsvp-form label {
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.rsvp-form textarea {
+  min-height: 80px;
+}
+
+.rsvp-form button {
+  background-color: #b56576;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.rsvp-form button:hover {
+  background-color: #944e5f;
+}
+
+.success-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #dff5e1;
+  color: #2a5a38;
+  padding: 20px 25px;
+  border: 1px solid #b7e3c4;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-popup button {
+  background: #2a5a38;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.success-popup button:hover {
+  background: #1f412a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -45%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
