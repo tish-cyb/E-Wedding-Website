@@ -128,7 +128,7 @@ const OurStory = () => {
             <div className="timeline-item">
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">How We Met</h3>
+                <h3 className="timeline-title">2017, How We Met</h3>
                 <p className="timeline-text">
                   It was a beautiful autumn day when our paths first crossed. What started as a chance encounter became the beginning of our greatest adventure together.
                 </p>
@@ -138,7 +138,7 @@ const OurStory = () => {
             <div className="timeline-item">
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">First Date</h3>
+                <h3 className="timeline-title">2018, First Date</h3>
                 <p className="timeline-text">
                   Under the soft glow of city lights, we shared stories, laughter, and dreams. That night, we both knew something magical was beginning.
                 </p>
@@ -148,7 +148,7 @@ const OurStory = () => {
             <div className="timeline-item">
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">The Proposal</h3>
+                <h3 className="timeline-title">2024, The Proposal</h3>
                 <p className="timeline-text">
                   Surrounded by the places that held our memories, the question was asked and answered with tears of joy. Our journey to forever officially began.
                 </p>
@@ -158,7 +158,7 @@ const OurStory = () => {
             <div className="timeline-item">
               <div className="timeline-marker"></div>
               <div className="timeline-content">
-                <h3 className="timeline-title">Wedding Day</h3>
+                <h3 className="timeline-title">2025, Wedding Day</h3>
                 <p className="timeline-text">
                   As we prepare to say "I do," we invite you to witness the next chapter of our love story. Thank you for being part of our journey.
                 </p>
