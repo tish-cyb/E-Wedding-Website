@@ -56,10 +56,10 @@ const Navbar = () => {
             <span className="rotate-word word-2">Gallery</span>
           </span>
         </a>
-        <a href="#contacts">
+        <a href="#registry">
           <span className="rotate-text">
-            <span className="rotate-word word-1">Contacts</span>
-            <span className="rotate-word word-2">Contacts</span>
+            <span className="rotate-word word-1">Registry</span>
+            <span className="rotate-word word-2">Registry</span>
           </span>
         </a>
       </div>
