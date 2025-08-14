@@ -1,16 +1,96 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style-type: none;
+/* Full-width background for Swiper/Gallery section */
+.swiper-section {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(135deg, #f8f6f3 0%, #f8f8f8 100%);
+  padding: 4rem 0; /* top and bottom space */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  color: #2c2c2c;
 }
 
-:root {
-  --primary: #6a59ff;
-  --white: #ffffff;
-  --bg: #f5f5f5;
+/* Heading inside gallery */
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  margin-bottom: 1.5rem; 
+  text-align: center;
+  color: #2c2c2c;
 }
 
-/* ... keep the rest of your CSS from above */
+/* Title Divider under heading */
+.title-divider {
+  width: 100px;
+  height: 2px;
+  background: #2c2c2c;
+  margin: 1rem auto 2rem; 
+}
+
+/* Subheading under the gallery heading */
+.subheading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #201a15d7;
+  text-align: center;
+  margin-bottom: 2rem; 
+}
+
+/* Swiper container inside the section */
+.swiper_container {
+  height: 100%;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+}
+
+/* Each slide */
+.swiper-slide {
+  width: 320px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Hide default shadows */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+/* Swiper navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #d2c0b3; /* arrow color */
+}
+
+/* Make ion-icons inside arrows inherit color */
+.swiper-button-prev ion-icon,
+.swiper-button-next ion-icon {
+  color: #666;
+}
+
+/* Swiper pagination bullets */
+.swiper-pagination-bullet {
+  background: #d2c0b3; /* inactive bullets */
+  opacity: 1;
+}
+
+/* Active pagination bullet */
+.swiper-pagination-bullet-active {
+  background: #444; /* slightly darker for active */
+}

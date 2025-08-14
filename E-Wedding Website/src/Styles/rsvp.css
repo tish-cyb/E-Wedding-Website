@@ -1,18 +1,18 @@
 .rsvp-section {
   padding: 140px 40px 40px 40px;
-  background: #f8f8f8;
+  background: #d2c0b3d7; /* Beige background to match Our Story */
   text-align: center;
   border-radius: 10px;
   max-width: 600px;
   margin: 40px auto;
-  border: 2px solid pink;
-  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+  border: 1px solid #c4b1a3d7; /* Matching border color */
+  box-shadow: 0 4px 10px #a07d6b33; /* Subtle warm shadow */
   position: relative;
   overflow: hidden;
 }
 
 .rsvp-header {
-  background-color: pink;
+  background-color: #c4b1a3d7; /* Header background matches event cards hover */
   position: absolute;
   left: 0;
   top: 0;
@@ -22,7 +22,7 @@
 
 .rsvp-section h2 {
   font-family: 'Playfair Display', serif;
-  color: white;
+  color: #201a15d7; /* Dark brown text */
   font-size: 2rem;
   letter-spacing: 5px;
   margin-bottom: 10px;
@@ -31,7 +31,7 @@
 .rsvp-section p {
   font-family: 'Allura', cursive;
   font-size: 1.5rem;
-  color: white;
+  color: #201a15d7;
   margin-bottom: 10px;
 }
 
@@ -45,6 +45,7 @@
   text-align: left;
   font-weight: 500;
   font-size: 0.95rem;
+  color: #201a15d7;
 }
 
 .rsvp-form input,
@@ -52,7 +53,7 @@
 .rsvp-form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #c4b1a3d7;
   border-radius: 6px;
   margin-top: 5px;
   font-size: 1rem;
@@ -63,7 +64,7 @@
 }
 
 .rsvp-form button {
-  background-color: #b56576;
+  background-color: #a07d6b; /* Warm brown button */
   color: white;
   padding: 12px;
   border: none;
@@ -75,7 +76,7 @@
 }
 
 .rsvp-form button:hover {
-  background-color: #944e5f;
+  background-color: #8e6e5d;
 }
 
 .success-popup {
@@ -83,10 +84,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #dff5e1;
-  color: #2a5a38;
+  background: #d2c0b3d7;
+  color: #201a15d7;
   padding: 20px 25px;
-  border: 1px solid #b7e3c4;
+  border: 1px solid #c4b1a3d7;
   border-radius: 10px;
   font-size: 1.2rem;
   z-index: 9999;
@@ -96,7 +97,7 @@
 }
 
 .success-popup button {
-  background: #2a5a38;
+  background: #a07d6b;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -107,7 +108,7 @@
 }
 
 .success-popup button:hover {
-  background: #1f412a;
+  background: #8e6e5d;
 }
 
 @keyframes fadeIn {

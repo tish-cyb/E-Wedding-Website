@@ -13,7 +13,6 @@ const Navbar = () => {
         setShowNav(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

@@ -1,221 +1,136 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Great+Vibes&display=swap');
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-body {
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0; 
   overflow-x: hidden;
-
-  /* Full-page background image */
-  background-image: url('/images/6.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
 }
 
-/* Optional: Site-wide dark overlay for readability */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-}
-
-/* Navbar container */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2.5rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 70px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Logo section */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.logo-img {
-  height: 45px;
-  width: auto;
-  margin-right: 10px;
-}
-
-/* Navigation links */
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.5rem;
-  height: 100%;
-}
-
-.nav-links a {
-  text-decoration: none; /* remove underline */
-  color: #333;
-  font-weight: 500;
-  position: relative;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  line-height: 1;
-  padding: 0.5rem 0.75rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #a68a64; /* soft brown on hover */
-}
-
-/* Rotate text effect */
-.rotate-text {
-  display: inline-block;
-  position: relative;
-  height: 1rem;
-  overflow: hidden;
-}
-
-.rotate-word {
-  display: block;
-  transition: transform 0.3s ease-in-out;
-  white-space: nowrap;
-}
-
-.rotate-word.word-1 {
-  transform: translateY(0);
-}
-
-.nav-links a:hover .rotate-word.word-1 {
-  transform: translateY(-100%);
-}
-
-.rotate-word.word-2 {
+/* NAVBAR stays above hero */
+.navbar {
   position: absolute;
-  top: 100%;
-  left: 0;
-  transform: translateY(0);
-  transition: top 0.3s ease-in-out;
-}
-
-.nav-links a:hover .rotate-word.word-2 {
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.1); /* see-through */
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+  color: white;
 }
 
-/* Hero Section */
+/* HERO SECTION (full-bleed, bg fixed behind navbar) */
 .home-hero {
+  min-height: 100vh;
+  margin-inline: calc(50% - 50vw); /* escape container padding */
+  max-width: 100vw;
   position: relative;
-  width: 100%;
-  height: 100vh;
+  z-index: 0;
+  
+  
+  background: url('../images/6.jpg') no-repeat center center fixed;
+  background-size: cover;
+
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 20px;
-  text-align: left;
-  box-sizing: border-box;
-  overflow: visible;
+  text-align: center;
+
+  color: white;
+  padding: 0;
+  margin-top: 0;
+  padding-top: 80px; 
+}
+
+/* Optional overlay for readability */
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
-/* Hero Text & Button */
+/* HERO CONTENT */
 .hero-content {
-  color: white;
+  position: relative;
   z-index: 2;
-  max-width: 500px;
-  margin-right: 700px;
+  max-width: 800px;
+  padding: 0 1rem;
 }
 
 .hero-title {
+  font-size: 3rem;
   font-family: 'Great Vibes', cursive;
-  font-size: 6rem;
-  font-weight: normal;
   margin-bottom: 0.5rem;
-  white-space: normal;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  font-weight: 400;
-  white-space: normal;
 }
 
-/* RSVP Button - Beige Wedding Style */
+/* HERO BUTTON */
 .hero-btn {
   display: inline-block;
-  font-size: 17px;
-  padding: 1em 2.7em;
-  font-weight: 500;
-  background: #f5f5dc; /* light beige */
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background: #fff;
   color: #333;
-  border: none;
-  border-radius: 0.6em;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none; /* remove underline */
-  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .hero-btn:hover {
-  background-color: #d4b98c; /* darker beige */
-  color: white; /* contrast text */
-  transform: scale(1.05);
+  background: #caad81;
+  color: #000;
+  transform: translateY(-3px);
 }
 
-.hero-btn:active {
-  transform: scale(0.97);
+/* SECTION WRAPPER */
+.section {
+  width: 100vw;
+  padding: 4rem 2rem;
+  background-color: #f8f8f8;
 }
 
-/* Responsive Adjustments */
+.section-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem 0;
-  }
-
   .home-hero {
-    padding: 2rem 1rem;
+    background-attachment: scroll; /* smoother on mobile */
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
   }
 }

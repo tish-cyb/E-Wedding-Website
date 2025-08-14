@@ -1,12 +1,21 @@
 .wedding-events {
   position: relative;
-  height: auto;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 3%;
+  min-height: 100vh; /* Make it fill the screen */
+  margin-inline: calc(50% - 50vw); /* Force full viewport width */
+  max-width: 100vw;
+  padding: 40px 3% 40px 3%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Remove gap behind navbar */
+  padding-top: 0;
+}
+.wedding-events > *:first-child {
+  margin-top: 0; /* Prevent top margin from first child */
 }
 
 .wedding-events .overlay {
@@ -15,7 +24,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #EEE8E3;
+  background: #f8f8f8;
   z-index: 1;
 }
 
