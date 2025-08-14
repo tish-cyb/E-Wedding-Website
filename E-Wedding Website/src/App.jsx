@@ -20,6 +20,7 @@ function App() {
       <Gallery />
 
       <RSVP />
+      <OurStory />
     </>
   );
 }
