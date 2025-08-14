@@ -1,13 +1,14 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-x: hidden;
 
   /* Full-page background image */
-  background-image: url('/images/2.jpg');
+  background-image: url('/images/6.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,7 +68,7 @@ body::before {
 }
 
 .nav-links a {
-  text-decoration: none;
+  text-decoration: none; /* remove underline */
   color: #333;
   font-weight: 500;
   position: relative;
@@ -77,6 +78,11 @@ body::before {
   font-size: 1rem;
   line-height: 1;
   padding: 0.5rem 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a68a64; /* soft brown on hover */
 }
 
 /* Rotate text effect */
@@ -118,17 +124,64 @@ body::before {
   position: relative;
   width: 100%;
   height: 100vh;
-
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  flex-direction: column;
-
-  padding: 0 1rem;
+  justify-content: flex-start;
+  padding-left: 20px;
+  text-align: left;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
+}
+
+/* Hero Text & Button */
+.hero-content {
+  color: white;
+  z-index: 2;
+  max-width: 500px;
+  margin-right: 700px;
+}
+
+.hero-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 6rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  white-space: normal;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  white-space: normal;
+}
+
+/* RSVP Button - Beige Wedding Style */
+.hero-btn {
+  display: inline-block;
+  font-size: 17px;
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #f5f5dc; /* light beige */
+  color: #333;
+  border: none;
+  border-radius: 0.6em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none; /* remove underline */
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #d4b98c; /* darker beige */
+  color: white; /* contrast text */
+  transform: scale(1.05);
+}
+
+.hero-btn:active {
+  transform: scale(0.97);
 }
 
 /* Responsive Adjustments */
@@ -156,5 +209,13 @@ body::before {
 
   .home-hero {
     padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
 }

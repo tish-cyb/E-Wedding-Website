@@ -43,7 +43,7 @@ body {
   display: flex;
   align-items: center;
   height: 100%;
-  padding-left: 20px; /* Push logo slightly to the right */
+  padding-left: 30px; /* Push logo slightly to the right */
 }
 
 .logo-img {
@@ -64,7 +64,7 @@ body {
 /* Link styling */
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #F5F5DC; /* Beige color for links */
   font-weight: 500;
   position: relative;
   white-space: nowrap;
@@ -73,6 +73,12 @@ body {
   font-size: 1rem;
   line-height: 1; /* Keeps links vertically centered */
   padding: 0.5rem 0.75rem;
+  transition: color 0.3s ease;
+}
+
+/* Optional hover color change for better visibility */
+.nav-links a:hover {
+  color: #e0d8b0; /* Slightly darker beige on hover */
 }
 
 /* Rotate text effect */
