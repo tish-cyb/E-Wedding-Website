@@ -13,8 +13,22 @@ function Events() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-   
-    setShow(true);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setShow(true);
+            observer.unobserve(entry.target); // only trigger once
+          }
+        });
+      },
+      { threshold: 0.2 } // triggers when 20% visible
+    );
+
+    const section = document.getElementById('events');
+    if (section) observer.observe(section);
+
+    return () => observer.disconnect();
   }, []);
 
   const toggleAccordion = (index) => {
@@ -22,7 +36,7 @@ function Events() {
   }
 
   return (
-    <section className="wedding-events" id="events">
+    <section className={`wedding-events ${show ? 'show' : ''}`} id="events">
       <div className="overlay"></div>
       <div className="content">
 
@@ -53,26 +67,30 @@ function Events() {
           ))}
         </div>
 
-        
-        <div className={`invitation ${show ? 'show' : ''}`}>
-          <h2>You're Invited!</h2>
-          <p>
-            We are delighted to invite you to celebrate our wedding in the heart of elegance — 
-            the <strong>Crystal Pavilion at Okada Manila</strong>. Our theme is <strong>Regency</strong>, 
-            where timeless grace meets modern charm.
-          </p>
-          <p>
-            Please join us in semi-formal attire as we exchange vows and share this joyous moment. 
-            We can’t wait to welcome you to our special day filled with love, laughter, and unforgettable memories.
-          </p>
-          <div className="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.2311608264456!2d120.97996215552124!3d14.515527604259752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cdb9f25aa7b9%3A0x5a5d4fd070c78502!2sCrystal%20Pavilion%2C%20Okada%20Manila!5e0!3m2!1sen!2sph!4v1754991333390!5m2!1sen!2sph"
-              allowFullScreen
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
+
+  <div className={`invitation-text ${show ? 'show' : ''}`}>
+    <h2>You're Invited!</h2>
+      <p>
+         We are delighted to invite you to celebrate our wedding in the heart of elegance — 
+         the <strong>Crystal Pavilion at Okada Manila</strong>. Our theme is <strong>Regency</strong>, 
+         where timeless grace meets modern charm.
+      </p>
+      <p>
+        Please join us in semi-formal attire as we exchange vows and share this joyous moment. 
+        We can’t wait to welcome you to our special day filled with love, laughter, and unforgettable memories.
+      </p>
+  </div>
+
+
+  <div className={`invitation-map ${show ? 'show' : ''}`}>
+    <div className="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.2311608264456!2d120.97996215552124!3d14.515527604259752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cdb9f25aa7b9%3A0x5a5d4fd070c78502!2sCrystal%20Pavilion%2C%20Okada%20Manila!5e0!3m2!1sen!2sph!4v1754991333390!5m2!1sen!2sph"
+        allowFullScreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
 
       </div>
     </section>
