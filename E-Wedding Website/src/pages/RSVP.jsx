@@ -107,6 +107,8 @@ const RSVP = () => {
               <option value="one">1</option>
               <option value="two">2</option>
               <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="five">5</option>
             </select>
           </label>
 
@@ -119,9 +121,10 @@ const RSVP = () => {
               onChange={handleChange}
             >
               <option value="all">All</option>
-              <option value="ceremony">Wedding Ceremony</option>
-              <option value="party">Wedding Party</option>
-              <option value="accommodation">Accommodations</option>
+              <option value="prewedding">Pre-Wedding Ceremony</option>
+              <option value="mainwedding">Main Wedding Ceremony</option>
+              <option value="weddingreception">Wedding Reception</option>
+              <option value="afterparty">After-Party</option>
             </select>
           </label>
         </div>
