@@ -1,22 +1,20 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .wedding-events {
   position: relative;
-  min-height: 100vh; /* Make it fill the screen */
-  margin-inline: calc(50% - 50vw); /* Force full viewport width */
-  max-width: 100vw;
-  padding: 40px 3% 40px 3%;
+  min-height: 100vh;
+  width: 100%; 
+  background: #f8f6f3; 
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 5em;
-
-  /* Remove gap behind navbar */
-  padding-top: 0;
-}
-.wedding-events > *:first-child {
-  margin-top: 0; /* Prevent top margin from first child */
+  justify-content: center; 
+  padding: 40px 0; 
+  z-index: 0;
 }
 
 .wedding-events .overlay {
@@ -25,7 +23,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f8f8f8;
+  background: rgba(255, 255, 255, 0.1);
   z-index: 1;
 }
 
@@ -33,89 +31,193 @@
   position: relative;
   z-index: 2;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
+  max-width: 1400px; 
+  width: 100%; 
+  padding: 0; 
+  margin: 0 auto; 
+  box-sizing: border-box;
+}
+
+.wedding-events .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1400px;
-  color: white;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.wedding-events .content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1400px; 
+  width: 100%;
+  padding: 0 20px; 
+  box-sizing: border-box;
+  margin: 0 auto; 
+}
+
+.events-header {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.events-header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.events-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: #262626;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.events-header .title-divider {
+  width: 80px;
+  height: 2px;
+  background: #2c2c2c;
+  margin: 1rem auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+.events-header p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 .schedule {
   flex: 1;
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.schedule.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .event-card {
-  background: #d2c0b3d7;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #c4b1a3d7;
-  transition: transform 0.2s ease, background 0.3s ease;
-  box-shadow: 0 4px 10px #a07d6b33; 
-  width: 100%;
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.event-card .card-header {
+  padding: 15px 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-card .card-header span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.event-card.active .card-header span {
+  transform: rotate(180deg);
+}
+
+.event-card .card-body {
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #111;
+}
+
+.event-card.active .card-body {
+  max-height: 200px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .event-card:hover {
-  transform: translateY(-5px);
-  background: #c4b1a3d7;
-  box-shadow: 0 8px 20px rgba(79, 63, 53, 0.2);
-}
-
-.event-card h3 {
-  margin: 2px 0 0;
-  font-size: 1.25rem;
-  font-weight: bold;
-  font-family: 'Playfair Display', serif;
-  color: #201a15d7;
-}
-
-.event-card p {
-  margin: 0 0 4px;
-  font-size: 0.95rem;
-  font-family: 'Arial Narrow', Arial, sans-serif;
-  color: #201a15d7;
+  background: #f9f9f9;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .invitation {
   flex: 1.5;
-  background: #d2c0b3d7;
-  padding: 20px;
-  border-radius: 8px; 
-  border: 1px solid #c4b1a3d7;
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 10px; 
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.invitation.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .invitation h2 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 15px;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: bold;
-  color: #201a15d7;
+  color: #111;
 }
 
 .invitation p {
-  margin: 15px 5px 30px 15px;
-  line-height: 1.5;
-  font-family: 'Arial Narrow', Arial, sans-serif;
-  color: #201a15d7;
+  margin: 15px 0 25px 0;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  color: #111;
 }
 
 .map {
-    margin: 15px;
-    border: 0;
-    border-radius: 8px;
-    overflow: hidden;
+  margin: 15px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .map iframe {
-  border-radius: 8px;
+  border-radius: 12px;
   border: none;
   display: block;
-  margin: 0;
+  width: 100%;
+  height: 450px;
 }
 
-.wedding-events .content {
-  display: flex;
-  flex-wrap: wrap;
+.map:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 @media (max-width: 992px) {
