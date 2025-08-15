@@ -63,11 +63,7 @@ const RSVP = () => {
     >
       <div className="rsvp-header">
         <h2>RSVP</h2>
-        <div className="heartbeat-container">
-          <div className="heartline"></div>
-          <img src="../public/heartbeat.gif" alt="heartbeat" />
-          <div className="heartline"></div>
-        </div>
+        <div className="divider"></div>
         <p>We’d love to know if you can celebrate with us!</p>
       </div>
 

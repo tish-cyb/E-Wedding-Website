@@ -32,35 +32,23 @@ body {
   margin-bottom: 30px;
 }
 
-.heartbeat-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.heartbeat-container img {
-  width: 30px;
-  height: auto;
-}
-
-.heartline {
-  height: 2px;
-  width: 150px;
-  background-color: black;
-  border-radius: 50px;
-}
-
 .rsvp-section h2 {
-  color: #201a15d7;
-  font-size: 2.5rem;
+  color: #2c2c2c;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: 5px;
   margin-bottom: 0;
 }
 
+.divider {
+    width: 100px;
+    height: 2px;
+    background: #2c2c2c;
+    margin: 1rem auto 2rem;
+}
+
 .rsvp-section p {
-  font-size: 1rem;
-  color: #201a15d7;
+  font-size: 1.25rem;
+  color: #666;
   margin-bottom: 10px;
 }
 
@@ -181,6 +169,7 @@ select:-webkit-autofill:focus {
   z-index: 9999;
   text-align: center;
   animation: fadeIn 0.3s ease-in-out;
+  text-wrap: nowrap;
 }
 
 .success-popup.fade-out {
