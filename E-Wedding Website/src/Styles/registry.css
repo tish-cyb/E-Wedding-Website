@@ -20,7 +20,7 @@
   width: 80px;
   height: 2px;
   background: #2c2c2c;
-  margin: 1rem auto 2rem; 
+  margin: 2rem auto 2rem;
 }
 
 .registry-section p {
@@ -28,10 +28,12 @@
   font-size: 1.25rem;
   color: #666;
   text-align: center;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
 }
 
+/* Base hidden state */
 .registry-section > h2,
+.registry-section > .title-divider,
 .registry-section > p,
 .flip-card {
   opacity: 0;
@@ -39,11 +41,30 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.registry-section > h2.show,
-.registry-section > p.show,
+/* Sequential show states */
+.registry-section > h2.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s; /* heading first */
+}
+
+.registry-section > .title-divider.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s; /* divider next */
+  transition-duration: 0.6s; /* faster */
+}
+
+.registry-section > p.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s; /* after divider */
+}
+
 .flip-card.show {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.8s; /* cards appear last */
 }
 
 .registry-cards {
@@ -55,11 +76,11 @@
 
 .flip-card {
   background-color: transparent;
-  width: 100%;           
-  max-width: 300px;      
-  height: 220px;         
+  width: 100%;
+  max-width: 300px;
+  height: 220px;
   perspective: 1000px;
-  flex: 1 1 250px;      
+  flex: 1 1 250px;
 }
 
 .flip-card-inner {
@@ -132,7 +153,7 @@
   .flip-card {
     width: 90%;
     height: 200px;
-    flex: unset;  
+    flex: unset;
   }
 }
 

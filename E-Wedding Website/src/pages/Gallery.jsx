@@ -22,11 +22,11 @@ function Gallery() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("show"); // add show class when in view
+            entry.target.classList.add("show"); 
           }
         });
       },
-      { threshold: 0.3 } // triggers when 20% visible
+      { threshold: 0.2 } 
     );
 
     if (galleryText) observer.observe(galleryText);
