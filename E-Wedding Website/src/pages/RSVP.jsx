@@ -28,7 +28,7 @@ const RSVP = () => {
   };
 
   return (
-    <section className="rsvp-section">
+    <section className="rsvp-section" id="rsvp">
       <div className="rsvp-header">
         <h2>RSVP</h2>
         <p>We’d love to know if you can celebrate with us!</p>

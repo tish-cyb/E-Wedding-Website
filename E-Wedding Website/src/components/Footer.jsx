@@ -1,0 +1,75 @@
+// Footer.jsx
+import React from "react";
+import "../Styles/Footer.css"; // optional external css
+
+const Footer = () => {
+  return (
+    <footer className="site-footer">
+      <div className="footer-container">
+
+        {/* Logo + Social */}
+        <div
+          className="footer-logo"
+          onClick={() => (window.location.href = "https://jaehubservices.com/")}
+        >
+          <img
+            src="src/assets/logos/jaehub-logo.png"
+            alt="JAE Hub Logo"
+          />
+          <div className="social-icons">
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                alt="Instagram"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+                alt="YouTube"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Quick Links */}
+        <div className="footer-links">
+          <h3>Quick Links</h3>
+          <table>
+            <tr>
+              <td><a href="#home">Home</a></td>
+              <td><a href="#our-story">Our Story</a></td>
+              <td><a href="#events">Events</a></td>
+            </tr>
+            <tr>
+              <td><a href="#rsvp">RSVP</a></td>
+              <td><a href="#gallery">Gallery</a></td>
+              <td><a href="#registry">Registry</a></td>
+            </tr>
+          </table>
+        </div>
+
+        {/* Contact Info */}
+        <div className="footer-contact">
+          <h3>Contact Info</h3>
+          <p>📧 admin@jaehubservices.com</p>
+          <p>📞 +63-956-150-9151</p>
+          <p>📍 Unit 1015 Winland Tower Tomas Morato Kristong Hari Quezon City 1101</p>
+        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="footer-bottom">
+        © 2025 JAE Hub Services. All rights reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

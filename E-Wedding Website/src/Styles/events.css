@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 5em;
 
   /* Remove gap behind navbar */
   padding-top: 0;

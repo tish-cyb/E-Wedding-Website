@@ -3,7 +3,7 @@ import '../styles/events.css';
 
 function Events() {
   return (
-    <section className="wedding-events">
+    <section className="wedding-events" id="events">
   <div className="overlay"></div>
 
   <div className="content">

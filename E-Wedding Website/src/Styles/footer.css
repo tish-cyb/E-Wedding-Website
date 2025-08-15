@@ -1,0 +1,80 @@
+.site-footer {
+  background: #000000;
+  padding: 50px 30% 20px;
+  font-family: "Georgia", serif;
+  color: #FFFFFF;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  gap: 40px;
+}
+
+.footer-logo img {
+  max-width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  margin-left: 2em
+}
+
+.footer-links table {
+  padding: 0;
+  margin-left: 2em;
+  height: 70px;
+}
+
+.footer-links table td a {
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+  padding: 3em;
+}   
+
+.footer-links table td a:hover {
+  color: #a37858;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding-top: 12px;
+  font-size: 14px;
+  color: #666;
+}
