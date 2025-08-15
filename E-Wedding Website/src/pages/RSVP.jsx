@@ -36,6 +36,7 @@ const RSVP = () => {
 
       <form className="rsvp-form" onSubmit={handleSubmit}>
         <label>
+          <span>*</span>
           Full Name
           <input
             type="text"
@@ -47,6 +48,7 @@ const RSVP = () => {
         </label>
 
         <label>
+          <span>*</span>
           Email Address
           <input
             type="email"
@@ -58,14 +60,32 @@ const RSVP = () => {
         </label>
 
         <label>
+          <span>*</span>
+          Number of guests
+          <select
+            name="guests"
+            value={formData.guests}
+            onChange={handleChange}
+          >
+            <option value="me">Only Me</option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+          </select>
+        </label>
+
+        <label>
+          <span>*</span>
           Will you be attending?
           <select
             name="attending"
             value={formData.attending}
             onChange={handleChange}
           >
-            <option value="yes">Yes, I’ll be there</option>
-            <option value="no">Sorry, I can’t make it</option>
+            <option value="all">All</option>
+            <option value="ceremony">Wedding Ceremony</option>
+            <option value="party">Wedding Party</option>
+            <option value="accommodation">Accommodations</option>
           </select>
         </label>
 
@@ -84,7 +104,7 @@ const RSVP = () => {
 
       {submitted && (
         <div className="success-popup">
-          💌 Thank you for your RSVP! We can’t wait to see you there.
+            Thank you for your RSVP! We can’t wait to see you there!
           <br />
           <button onClick={() => setSubmitted(false)}>Close</button>
         </div>
