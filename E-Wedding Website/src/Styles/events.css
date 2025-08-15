@@ -195,11 +195,19 @@ body, html {
 }
 
 @media (max-width: 992px) {
-  .schedule, 
-  .invitation-text,
+  .schedule {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .invitation-text {
+    flex: 1 1 calc(40% - 20px);
+    max-width: calc(40% - 20px);
+  }
+
   .invitation-map {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    flex: 1 1 calc(60% - 20px);
+    max-width: calc(60% - 20px);
   }
 }
 
@@ -209,6 +217,21 @@ body, html {
   .invitation-map {
     flex: 1 1 100%; 
     max-width: 100%;
+  }
+
+  .invitation-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .invitation-map {
+    min-height: 350px;     
+  }
+
+  .invitation-map iframe {
+    width: 100%;
+    height: 350px;
   }
 }
 
