@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f8f8f8 !important;
 }
 
 /* ===== RSVP Section ===== */
@@ -17,8 +18,6 @@ body {
   border-radius: 10px;
   max-width: 600px;
   margin: 40px auto;
-  border: 1px solid #c4b1a3d7; /* Matching border color */
-  box-shadow: none; /* Removed shadow */
   position: relative;
   overflow: hidden;
 }
@@ -35,13 +34,12 @@ body {
 
 .rsvp-section h2 {
   color: #201a15d7; /* Dark brown text */
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 5px;
   margin-bottom: 10px;
 }
 
 .rsvp-section p {
-  font-family: 'Allura', cursive;
   font-size: 1rem;
   color: #201a15d7;
   margin-bottom: 10px;
@@ -89,7 +87,7 @@ body {
   color: white;
   padding: 12px;
   border: none;
-  border-radius: 25px; /* Rounder */
+  border-radius: 15px; /* Rounder */
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -97,7 +95,8 @@ body {
 }
 
 .rsvp-form button:hover {
-  background-color: #8e6e5d;
+  background-color: #99715b;
+  border-radius: 25px;
 }
 
 /* ===== Success Popup ===== */
@@ -106,10 +105,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #d2c0b3d7;
+  background: #ffffffd7;
   color: #201a15d7;
   padding: 20px 25px;
-  border: 1px solid #c4b1a3d7;
+  border: 2px solid #c4b1a3d7;
   border-radius: 10px;
   font-size: 1.2rem;
   z-index: 9999;
