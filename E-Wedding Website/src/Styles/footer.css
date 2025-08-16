@@ -1,5 +1,5 @@
 .site-footer {
-  background: #000000;
+  background: #2c2c2c;
   padding: 50px 30% 20px;
   font-family: "Georgia", serif;
   color: #FFFFFF;
@@ -58,7 +58,7 @@
   text-decoration: none;
   color: #FFFFFF;
   transition: color 0.3s ease;
-  padding: 3em;
+  padding: 1em;
 }   
 
 .footer-links table td a:hover {
@@ -72,7 +72,6 @@
 
 .footer-bottom {
   margin-top: 30px;
-  border-top: 1px solid #ddd;
   text-align: center;
   padding-top: 12px;
   font-size: 14px;

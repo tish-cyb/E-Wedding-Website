@@ -8,28 +8,31 @@ const Footer = () => {
       <div className="footer-container">
 
         {/* Logo + Social */}
-        <div
-          className="footer-logo"
-          onClick={() => (window.location.href = "https://jaehubservices.com/")}
-        >
-          <img
-            src="src/assets/logos/jaehub-logo.png"
-            alt="JAE Hub Logo"
-          />
+        <div className="footer-logo">
+          <a 
+            href="https://jaehubservices.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <img
+              src="src/assets/logos/jaehub-logo.png"
+              alt="JAE Hub Logo"
+            />
+          </a>
           <div className="social-icons">
-            <a href="#">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
                 alt="Instagram"
               />
             </a>
-            <a href="#">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
                 alt="YouTube"
               />
             </a>
-            <a href="#">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
                 alt="Facebook"
