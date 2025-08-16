@@ -63,7 +63,7 @@ const Footer = () => {
           <h3>Contact Info</h3>
           <p>📧 admin@jaehubservices.com</p>
           <p>📞 +63-956-150-9151</p>
-          <p>📍 Unit 1015 Winland Tower Tomas Morato Kristong Hari Quezon City 1101</p>
+          <p>📍 Unit 1015 Winland Tower Tomas Morato, Quezon City</p>
         </div>
       </div>
 
