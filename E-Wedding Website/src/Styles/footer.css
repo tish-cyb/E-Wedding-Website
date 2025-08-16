@@ -1,6 +1,6 @@
 .site-footer {
   background: #2c2c2c;
-  padding: 50px 30% 20px;
+  padding: 50px 5% .3px;
   font-family: "Georgia", serif;
   color: #FFFFFF;
   position: relative;
@@ -46,6 +46,7 @@
   margin-bottom: 12px;
   font-weight: bold;
   margin-left: 2em
+  
 }
 
 .footer-links table {
@@ -66,7 +67,7 @@
 }
 
 .footer-contact p {
-  margin: 6px 0;
+  margin: 1px 0;
   font-size: 14px;
 }
 
