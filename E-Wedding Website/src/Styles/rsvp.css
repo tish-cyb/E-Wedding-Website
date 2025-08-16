@@ -203,3 +203,35 @@ select:-webkit-autofill:focus {
   from { opacity: 1; transform: translate(-50%, -50%); }
   to { opacity: 0; transform: translate(-50%, -55%); }
 }
+
+/* Responsive adjustments for screens smaller than 600px */
+@media (max-width: 600px) {
+  .rsvp-section {
+    margin: 20px;
+    padding: 0 10px;
+  }
+
+  .rsvp-form {
+    padding: 15px 20px;
+  }
+
+  .row1, .row2 {
+    flex-direction: column; /* stack inputs vertically */
+    gap: 10px;
+  }
+
+  .rsvp-form button {
+    width: 100%; /* button takes full width */
+    padding: 10px;
+  }
+
+  .success-popup {
+    width: 90%;
+    font-size: 1rem;
+    padding: 15px;
+
+    /* Ensure text wraps on small screens */
+    white-space: normal;
+    word-break: break-word;
+  }
+}
