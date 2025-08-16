@@ -7,11 +7,11 @@ const OurStory = () => {
 
   // Array of story photos - you'll replace these with your actual photo names
   const storyPhotos = [
-    <img src="/E-Wedding-Website/images/story-1.jpg" alt="Photo 1" />,
-    <img src="/E-Wedding-Website/images/story-2.jpg" alt="Photo 2" />,
-    <img src="/E-Wedding-Website/images/story-3.jpg" alt="Photo 3" />,
-    <img src="/E-Wedding-Website/images/story-4.jpg" alt="Photo 4" />,
-    <img src="/E-Wedding-Website/images/story-5.jpg" alt="Photo 5" />
+    '/images/story-1.jpg',
+    '/images/story-2.jpg',
+    '/images/story-3.jpg',
+    '/images/story-4.jpg',
+    '/images/story-5.jpg'
   ];
 
   // Auto-advance carousel
