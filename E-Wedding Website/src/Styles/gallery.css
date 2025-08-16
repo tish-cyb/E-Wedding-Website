@@ -1,10 +1,9 @@
-/* Full-width background for Swiper/Gallery section */
 .swiper-section {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   background: linear-gradient(135deg, #f8f6f3 0%, #f8f8f8 100%);
-  padding: 4rem 0; /* top and bottom space */
+  padding: 4rem 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,7 +12,6 @@
   color: #2c2c2c;
 }
 
-/* Heading inside gallery */
 .heading {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -23,7 +21,6 @@
   color: #2c2c2c;
 }
 
-/* Title Divider under heading */
 .title-divider {
   width: 100px;
   height: 2px;
@@ -31,7 +28,6 @@
   margin: 1rem auto 2rem; 
 }
 
-/* Subheading under the gallery heading */
 .subheading {
   font-family: 'Playfair Display', serif;
   font-size: 1.25rem;
@@ -40,7 +36,6 @@
   margin-bottom: 2rem; 
 }
 
-/* Swiper container inside the section */
 .swiper_container {
   height: 100%;
   padding: 2rem 0;
@@ -48,7 +43,6 @@
   width: 100%;
 }
 
-/* Each slide */
 .swiper-slide {
   width: 320px;
   height: 400px;
@@ -66,34 +60,30 @@
   object-fit: cover;
 }
 
-/* Hide default shadows */
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
   display: none;
 }
 
-/* Swiper navigation arrows */
 .swiper-button-prev,
 .swiper-button-next {
-  color: #d2c0b3; /* arrow color */
+  color: #d2c0b3; 
 }
 
-/* Make ion-icons inside arrows inherit color */
 .swiper-button-prev ion-icon,
 .swiper-button-next ion-icon {
   color: #666;
 }
 
-/* Swiper pagination bullets */
 .swiper-pagination-bullet {
-  background: #d2c0b3; /* inactive bullets */
+  background: #d2c0b3;
   opacity: 1;
 }
 
-/* Active pagination bullet */
 .swiper-pagination-bullet-active {
-  background: #444; /* slightly darker for active */
+  background: #444; 
 }
+
 .gallery-text {
   opacity: 0;
   transform: translateY(40px);

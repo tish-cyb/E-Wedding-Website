@@ -18,11 +18,11 @@ function Events() {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setShow(true);
-            observer.unobserve(entry.target); // only trigger once
+            observer.unobserve(entry.target); 
           }
         });
       },
-      { threshold: 0.2 } // triggers when 20% visible
+      { threshold: 0.2 } 
     );
 
     const section = document.getElementById('events');
@@ -66,21 +66,6 @@ function Events() {
             </div>
           ))}
         </div>
-
-
-  <div className={`invitation-text ${show ? 'show' : ''}`}>
-    <h2>You're Invited!</h2>
-      <p>
-         We are delighted to invite you to celebrate our wedding in the heart of elegance — 
-         the <strong>Crystal Pavilion at Okada Manila</strong>. Our theme is <strong>Regency</strong>, 
-         where timeless grace meets modern charm.
-      </p>
-      <p>
-        Please join us in semi-formal attire as we exchange vows and share this joyous moment. 
-        We can’t wait to welcome you to our special day filled with love, laughter, and unforgettable memories.
-      </p>
-  </div>
-
 
   <div className={`invitation-map ${show ? 'show' : ''}`}>
     <div className="map">
